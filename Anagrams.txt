@@ -1,0 +1,31 @@
+//Strings Java Anagrams
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+	static boolean isAnagram(String a, String b) {
+        // Complete the function
+        char[] fromA = a.toLowerCase().toCharArray();
+        char[] fromB = b.toLowerCase().toCharArray();
+        
+        Arrays.sort(fromA);
+        Arrays.sort(fromB);
+        
+        a = new String(fromA);
+        b = new String(fromB);
+        
+        if(a.equals(b)) return true;
+        else return false; 
+    }
+	
+	public static void main(String[] args) {
+    
+        Scanner scan = new Scanner(System.in);
+        String a = scan.next();
+        String b = scan.next();
+        scan.close();
+        boolean ret = isAnagram(a, b);
+        System.out.println( (ret) ? "Anagrams" : "Not Anagrams" );
+    }
+}

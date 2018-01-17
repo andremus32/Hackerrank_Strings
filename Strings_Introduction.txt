@@ -1,0 +1,25 @@
+//Strings Java Strings_Introduction
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner sc=new Scanner(System.in);
+        String A=sc.next();
+        String B=sc.next();
+        /* Enter your code here. Print output to STDOUT. */
+        int x = A.length() + B.length();
+        String answer;
+        if (A.compareTo(B) > 0) answer = "Yes";
+        else answer = "No";
+        String newLine = A.toUpperCase().substring(0, 1) + A.substring(1) + " " + B.toUpperCase().substring(0, 1) + B.substring(1);
+        
+        System.out.println(x);
+        System.out.println(answer);
+        System.out.println(newLine);
+    }
+    
+}
